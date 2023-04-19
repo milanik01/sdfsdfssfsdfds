@@ -22,13 +22,15 @@ string [] CreateArray(int rows)
 
 void SortArray (string [] longArray)
 {
-    for(int i=1; i<=longArray.GetLength(0); i++)
+    Console.Write("->");
+    for(int i=0; i<longArray.GetLength(0); i++)
     {
-        if(longArray[i].Length<=3) Console.WriteLine(longArray[i]+" ,");
+        if(longArray[i].Length<=3) 
+        Console.Write(longArray[i]+", ");
     }
 }
 
 Console.WriteLine("Input size array ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-CreateArray(num);
+SortArray(CreateArray(num));
