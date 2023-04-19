@@ -30,7 +30,16 @@ void SortArray (string [] longArray)
     }
 }
 
-Console.WriteLine("Input size array ");
-int num = Convert.ToInt32(Console.ReadLine());
 
+
+int num;
+
+String Result = Console.ReadLine();
+
+while(!Int32.TryParse(Result, out num))
+{
+   Console.WriteLine("Not a valid number, try again.");
+
+   Result = Console.ReadLine();
+}
 SortArray(CreateArray(num));
